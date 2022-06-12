@@ -26,14 +26,14 @@ function play(player, cpu) {
 
             console.log(`${cpu} beats ${player}! You lose.`);
             console.log("Rounds:" + ++rounds);
-        // Win conditions
+
         } else if (player == "scissor" && cpu == "paper" ||
                     player == "rock" && cpu == "scissor" ||
                     player == "paper" && cpu == "rock") {
 
             console.log(`${player} beats ${cpu} You win!`);
             console.log("Rounds:" + ++rounds);
-        // Tie condition
+
         } else {
             console.log(`${player} and ${cpu} results in a tie!`);
             console.log("Rounds:" + ++rounds);
@@ -44,8 +44,8 @@ function gameReset() {
     rounds = 0;
 }
 
+// Account for Cancel or Empty inputs on prompt
 function caseCheck(player) {
-    // Account for Cancel or Empty inputs on prompt
     if (player == null || player == undefined || !(selection.includes(player.toLowerCase()))) {
         console.log("Please enter an valid option!");
         console.log(`You entered: ${player}`);
@@ -55,6 +55,7 @@ function caseCheck(player) {
     }
 }
 
+// Game start function to execute everything required to start a fresh game.
 function game() {
 
     gameReset();
