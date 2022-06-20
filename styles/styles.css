@@ -1,0 +1,29 @@
+.options {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px;
+}
+
+button {
+    margin: 0px 40px;
+    padding: 8px 32px;
+    border-radius: 4px;
+    border: solid 1px royalblue;
+    background-color: white;
+    font-weight: 700;
+    color: palevioletred;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-info {
+    border: solid 3px darkorange;
+    height: 400px;
+    width: 600px;
+    margin: 32px;
+}
