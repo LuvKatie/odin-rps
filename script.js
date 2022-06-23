@@ -62,21 +62,16 @@ function computerPlay() {
 function play(player, cpu) {
     player = playerSelection.toLowerCase();
     cpuCapFirst = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
-
     choices.textContent = `${playerSelection} VS ${cpuCapFirst}`;
-
         // Each if statment handles each outcome between win, lose, and tie.
         if (player == "scissor" && cpu == "rock" ||
             player == "rock" && cpu == "paper" ||
             player == "paper" && cpu == "scissor") {
-
-            result.textContent = `You lose.`;
-            roundState.textContent = `Rounds: ${++rounds} Your Score: ${playerScore} Computer Score: ${++cpuScore}`;
+                result.textContent = `You lose.`;
+                roundState.textContent = `Rounds: ${++rounds} Your Score: ${playerScore} Computer Score: ${++cpuScore}`;
             } else if (player == cpu) {
-
                 result.textContent = `Tie!`;
                 roundState.textContent = `Rounds: ${++rounds} Your Score: ${playerScore} Computer Score: ${cpuScore}`;
-                
             } else {
                 result.textContent = `You win!`;
                 roundState.textContent = `Rounds: ${++rounds} Your Score: ${++playerScore} Computer Score: ${cpuScore}`;
@@ -90,7 +85,6 @@ function gameReset() {
     selectDisplay.removeChild(restartBtn);
     pAll.forEach(p => p.textContent = '');
 }
-
 // Game start function to execute everything required to start a fresh game.
 function game() {
 
@@ -112,6 +106,7 @@ function game() {
         selectDisplay.append(restartBtn);
 
         const restart = document.querySelector('.restart');
+
         restart.addEventListener('click', gameReset);
     } else {
         play(playerSelection, computerSelection);
