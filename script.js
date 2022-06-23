@@ -61,8 +61,9 @@ function computerPlay() {
 
 function play(player, cpu) {
     player = playerSelection.toLowerCase();
+    cpuCapFirst = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
 
-    choices.textContent = `${player} VS ${cpu}`;
+    choices.textContent = `${playerSelection} VS ${cpuCapFirst}`;
 
         // Each if statment handles each outcome between win, lose, and tie.
         if (player == "scissor" && cpu == "rock" ||
